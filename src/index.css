@@ -1,0 +1,94 @@
+/* GameTracker-Frontend/src/index.css */
+
+/* 1. Importar Fuente */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* 2. Variables de Color */
+:root {
+  --primary: #4CAF50; /* Verde principal */
+  --secondary: #388E3C; /* Verde oscuro */
+  --light: #f4f4f4; /* Fondo claro */
+  --dark: #333; /* Texto oscuro */
+  --error: #e7195a; /* Color para mensajes de error */
+}
+
+/* 3. Reset Básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: var(--light);
+  color: var(--dark);
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* 4. Contenedor de Páginas */
+.pages {
+  max-width: 1200px;
+  padding: 20px;
+  margin: 0 auto; 
+  width: 100%;
+  flex-grow: 1; 
+}
+
+/* 5. Estilos de Botones y Formularios */
+
+button {
+  background: var(--primary);
+  color: white;
+  border: 0;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: var(--secondary);
+}
+
+.error {
+  padding: 10px;
+  background: #ffdbdb;
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius: 4px;
+  margin: 10px 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+input[type="email"], 
+input[type="password"],
+input[type="text"], 
+textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.login-form, .register-form, .game-form {
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

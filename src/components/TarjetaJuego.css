@@ -1,0 +1,103 @@
+/* src/components/TarjetaJuego.css */
+
+.game-list {
+    display: grid;
+    /* Muestra las tarjetas en columnas flexibles */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 20px;
+    padding: 20px;
+}
+
+.game-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.game-cover {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.game-details h3 {
+    font-size: 1.2em;
+    margin-top: 0;
+    color: #070707;
+}
+
+.game-details p {
+    font-size: 0.9em;
+    color: #070707;
+    margin: 4px 0;
+}
+
+/* 💥 BLOQUE DE ESTADO (CRUCIAL) 💥 */
+.status-tag {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-top: 8px;
+    color: white;
+}
+
+/* --- COLORES DE ESTADO FINALIZADOS --- */
+
+.status-complete {
+    background-color: #4CAF50; /* Verde */
+}
+
+.status-playing {
+    background-color: #8527f1; /* Púrpura/Azul */
+}
+
+.status-pending {
+    background-color: #FFC107; /* Naranja */
+    color: #333;
+}
+
+/* 💥 ESTILO ABANDONADO QUE DEBE SER ROJO 💥 */
+.status-abandonado {
+    background-color: #f35656;  /* Griss */
+    color: white;
+}
+
+.status-default {
+    background-color: #E0E0E0; /* Gris */
+}
+/* ------------------------------------- */
+
+.game-actions {
+    margin-top: 15px;
+}
+
+.delete-btn, .edit-btn {
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.edit-btn {
+    background-color: #2196F3;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #F44336;
+    color: white;
+}
